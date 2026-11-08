@@ -18,7 +18,7 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
-  const shellPaths = SHELL_ASSETS.map((asset) => new URL(asset, self.registration.scope).pathname);
-  if (event.request.method !== 'GET' || !shellPaths.includes(url.pathname)) return;
+  const shellUrls = SHELL_ASSETS.map((asset) => new URL(asset, self.registration.scope).href);
+  if (event.request.method !== 'GET' || !shellUrls.includes(url.href)) return;
   event.respondWith(caches.match(event.request).then((hit) => hit || fetch(event.request)));
 });
