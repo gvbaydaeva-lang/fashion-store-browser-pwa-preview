@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f6efe8">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <title>Демо-витрина</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar"><button type="button" class="brand" data-action="navigate" data-route="home">Демо-витрина</button><button type="button" class="cart-link" data-action="navigate" data-route="cart" aria-label="Открыть корзину">Корзина <span id="cart-badge" class="cart-badge">0</span></button></header>
+      <main id="screen" class="screen" aria-live="polite"></main>
+      <nav id="bottom-nav" class="bottom-nav" aria-label="Основная навигация"></nav>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    </div>
+    <script src="data.js"></script>
+    <script src="core.js"></script>
+    <script src="platform.js"></script>
+    <script src="ui.js"></script>
+    <script src="app.js"></script>
+    <script>
+      BrowserStoreApp.init();
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js');
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+<svg width="192" height="192" viewBox="0 0 192 192" role="img" aria-label="Демо-витрина">
+  <rect width="192" height="192" rx="40" fill="#285c63"/>
+  <path d="M55 61h82l-8 77H63z" fill="#f6efe8"/>
+  <path d="M75 69c0-14 9-24 21-24s21 10 21 24" fill="none" stroke="#f6efe8" stroke-width="9" stroke-linecap="round"/>
+</svg>
